@@ -8,15 +8,13 @@ var app = express();
 
 app.configure(function(){
   app.set('port', process.env.PORT || 8080);
-  app.set('views', __dirname + '/views');
+
+  //app.set('views', __dirname + '/views');
+  app.set('views', __dirname + '/public');
   app.set('view engine', 'jade');
-/*
-app.set('views', __dirname + '/views');
-*/
-app.engine('html', require('ejs').renderFile);
+  app.engine('html', require('ejs').renderFile);
 
 
-//app.use(express.staticProvider(__dirname + '/public'));
   app.use(express.static(__dirname + '/public'));
 
   app.use(express.favicon());
