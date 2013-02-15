@@ -53,6 +53,26 @@ app.get('/logout', function(req, res) {
     res.redirect('/');
 });
 
+app.get('/login_shopper', function(req,res) {
+   res.render('login_shopper.html');
+});
+
+app.get('/contact', function(req,res) {
+   res.render('contact.html');
+});
+
+app.get('/about', function(req,res) {
+   res.render('about.html');
+});
+
+app.get('/home_shopper', function(req,res) {
+   res.render('home_shopper.html');
+});
+
+app.get('/product_shopper', function(req,res) {
+   res.render('product_shopper.html');
+});
+
 app.get('/product_customer', function (req,res){
 
    res.render('product_customer.html');
